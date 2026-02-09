@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>2026003_020_A1s1</title>
+	<style> html, body { height: 98%; width: 100%; margin: 2px; } </style>
+	<style type="text/css"> #viewer { width:95%; height:90%; margin:auto; border:1px; border-style:solid; border-color:#696969;} </style>
+  </head>
+  <body bgcolor=#000000>
+  	<div style="display: flex; justify-content: center; margin:auto; border-bottom:5px; border-style:solid; border-color:#000000">
+	<a href="https://www.mn.uio.no/ibv/english/research/about/infrastructure/facilities/life-science/imaging/em/index.html" target="_blank"><img src="Assets/Logo/logosmall.png" alt="logo" /></a></div>
+    <div id="viewer"></div>
+    <script src="openseadragon/openseadragon.js"></script>
+	<script src="openseadragon/openseadragon-scalebar.js"></script>
+    <script>
+		var viewer = OpenSeadragon({
+			id:            'viewer',
+			prefixUrl:     'openseadragon/images/',
+			tileSources: [{
+				type:       "zoomifytileservice",
+				width:      32767,
+				height:     17229,
+				tilesUrl:   "2026003_020_2026003A_A1_ser1/",
+				tileSize: 256,
+				fileFormat: 'jpg'	
+			}],
+			showNavigator: true,
+			wrapHorizontal: false,
+			wrapVertical: false,
+			zoomPerScroll: 1.2,
+			minZoomImageRatio: 0.5,
+			showNavigationControl: false
+		});
+		viewer.scalebar({
+			type: OpenSeadragon.ScalebarType.MICROSCOPY,
+			pixelsPerMeter: 1550260000,
+			minWidth: "200px",
+			location: OpenSeadragon.ScalebarLocation.BOTTOM_RIGHT,
+			xOffset: 20,
+			yOffset: 10,
+			stayInsideImage: true,
+			color: "rgb(0, 0, 0)",
+			fontColor: "rgb(0, 0, 0)",
+			backgroundColor: "rgba(200, 200, 200, 0.0)",
+			fontSize: "large",
+			barThickness: 4
+		});
+    </script>
+  </body>
+</html>
